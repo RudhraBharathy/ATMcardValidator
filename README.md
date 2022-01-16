@@ -14,7 +14,7 @@ Use the **git clone** command in Terminal/Command prompt to clone this repositor
 
 To Compile this file in Terminal/Command prompt.
 
-```**g++ -o atmcardvalidator atmcardvalidator.cpp**
-
-**./atmcardvalidator**
+```
+g++ -o atmcardvalidator atmcardvalidator.cpp
+./atmcardvalidator
 ```
