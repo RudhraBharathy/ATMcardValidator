@@ -8,13 +8,13 @@ This is card validation can be done only for 16 digits ATM card number that is u
 
 Use the **git clone** command in Terminal/Command prompt to clone this repository.
 
-'''git clone https://github.com/RudhraBharathy/ATMcardValidator.git '''
+```git clone https://github.com/RudhraBharathy/ATMcardValidator.git ```
 
 ### Usage
 
 To Compile this file in Terminal/Command prompt.
 
-'''**g++ -o atmcardvalidator atmcardvalidator.cpp**
+```**g++ -o atmcardvalidator atmcardvalidator.cpp**
 
 **./atmcardvalidator**
-'''
+```
