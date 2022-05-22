@@ -4,7 +4,7 @@ This is used to Validate your ATM card number.
 
 This is card validation can be done only for 16 digits ATM card number that is used in India.
 
-## Colning
+## Cloning
 
 Use the **git clone** command in Terminal/Command prompt to clone this repository.
 
