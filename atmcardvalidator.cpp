@@ -4,13 +4,13 @@
 #include <sstream>
 using namespace std;
 int main(){
-    string atmnumber;
+    string atmnumber,cardIssuerName;
     int multipliednumbers=1,addedvalues=0,evennumberadded=0;
     cout<<"Enter your 16 digits ATM Number : ";
     getline(cin,atmnumber);//used getline insted of cin because cin cannot take input as string with space.
-    atmnumber.erase(remove(atmnumber.begin(),atmnumber.end(), ' '),atmnumber.end());//used to remove sapce in string
+    atmnumber.erase(remove(atmnumber.begin(),atmnumber.end(), ' '),atmnumber.end());//used to remove space in string
     if(atmnumber.length()!=16){
-        cout<<"Couldn't recognize your ATM number ,Please enter 16 digits."<<endl;
+        cout<<"Couldn't recognize ,Please enter your 16 digits ATM number."<<endl;
     }
     else{
         for(int i=0;i<atmnumber.length()-1;i+=2){
@@ -35,15 +35,30 @@ int main(){
             evennumberadded+=ctoiconvertedeven;
             }
         int finaladdedvalues = 10-((addedvalues+evennumberadded)%10);
+        char firstATMnumber = atmnumber[0];
+        int firstATMnumberconverted = firstATMnumber - '0';
         char lastATMnumber = atmnumber[atmnumber.length()-1];
         int lastATMnumberconverted = lastATMnumber - '0';
+
+        if(firstATMnumberconverted == 4){
+            cardIssuerName = "Visa";
+        }
+        else if (firstATMnumberconverted == 5)
+        {
+            cardIssuerName = "MasterCard";
+        }
+        else if (firstATMnumberconverted == 6)
+        {
+            cardIssuerName = "Rupay";
+        }
+        
         if (finaladdedvalues==lastATMnumberconverted)
         {
-            cout<<"Don't worry Your ATM card Number Ligit.."<<endl;
+            cout<<"Your " << cardIssuerName << " ATM card Number is Original.."<<endl;
             cout<<"Thank You have a Nice Day!!"<<endl;
         }
         else{
-            cout<<"Sorry, Your ATM card Number is not Legit,\nPlease contact your nearby bank Branch..\n" << endl;
+            cout<<"Sorry, Your " << cardIssuerName << " ATM card Number is not Original,\nPlease contact your nearby bank Branch..\n" << endl;
         }
 
     }
